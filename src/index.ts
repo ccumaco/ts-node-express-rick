@@ -12,10 +12,15 @@ const port = process.env.PORT || 5000
 var whitelist = [
   'http://localhost:3000',
   'https://rick-and-morty-73hzqdtl2-ccumaco.vercel.app/',
+  'https://rick-and-morty-ccumaco.vercel.app/',
 ]
 
 var corsOptions = {
-  origin: whitelist,
+  origin: [
+    'http://localhost:3000',
+    'https://rick-and-morty-73hzqdtl2-ccumaco.vercel.app/',
+    'https://rick-and-morty-ccumaco.vercel.app/',
+  ],
   optionsSuccessStatus: 200, // For legacy browser support
 }
 //config
