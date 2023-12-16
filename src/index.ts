@@ -9,7 +9,10 @@ const app: Express = express()
 const port = process.env.PORT || 5000
 
 //config cors
-const whitelist = ['http://localhost:3000', 'http://example2.com']
+const whitelist = [
+  'http://localhost:3000',
+  'https://rick-and-morty-73hzqdtl2-ccumaco.vercel.app/',
+]
 const corsOptions = {
   origin: whitelist,
   optionsSuccessStatus: 200,
