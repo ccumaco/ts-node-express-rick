@@ -3,4 +3,5 @@
 node_modules
 //ignore .env file
 .env
+dist
 ```
