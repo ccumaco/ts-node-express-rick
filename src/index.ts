@@ -15,13 +15,10 @@ var whitelist = [
   'https://rick-and-morty-ccumaco.vercel.app/',
 ]
 
-var corsOptions = {
-  origin: [
-    'http://localhost:3000',
-    'https://rick-and-morty-73hzqdtl2-ccumaco.vercel.app/',
-    'https://rick-and-morty-ccumaco.vercel.app/',
-  ],
-  optionsSuccessStatus: 200, // For legacy browser support
+const corsOptions = {
+  origin: '*',
+  methods: ['GET', 'POST', 'OPTIONS'],
+  optionsSuccessStatus: 200,
 }
 //config
 app.use(express.json())
