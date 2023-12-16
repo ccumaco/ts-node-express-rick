@@ -9,13 +9,14 @@ const app: Express = express()
 const port = process.env.PORT || 5000
 
 //config cors
-const whitelist = [
+var whitelist = [
   'http://localhost:3000',
   'https://rick-and-morty-73hzqdtl2-ccumaco.vercel.app/',
 ]
-const corsOptions = {
+
+var corsOptions = {
   origin: whitelist,
-  optionsSuccessStatus: 200,
+  optionsSuccessStatus: 200, // For legacy browser support
 }
 //config
 app.use(express.json())
